@@ -18,7 +18,8 @@ public class AdvertiserController {
     private final AtomicLong counter = new AtomicLong();
 
     @RequestMapping(value="/api/advertiser",method=RequestMethod.GET)
-    public Advertiser advertiser(@RequestParam(value="name", defaultValue="World") String name
+    public Advertiser advertiser(
+    		  @RequestParam(value="name") String name
     		, @RequestParam(value="contact", defaultValue="") String contact
     		, @RequestParam(value="credit_limit", defaultValue="0.0") float credit_limit
     		) {
